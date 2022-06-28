@@ -613,7 +613,7 @@ if (chats.startsWith(`@6288213292687`)){
 
 ┌━➤ *Bot WhatsApp*
 *┃┃* Creator Bot : ${ownerName}
-*┃┃* Name Bot : ${botName}
+*┃┃* Name Bot : Xyle - Bot
 *┃┃* Prefix : Multi Prefix
 *┃┃* Language : Javascript 
 *┃└━━━━━━━━━━━*
