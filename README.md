@@ -2,7 +2,7 @@
 Jojo Bot Multi Device
 
 ## DEPLOY TO HEROKU
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GetSya/JOJO-MD)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cakka587/XB)
 
 ## Module Untuk Multi Device
 Download Module [CLICK HERE](https://www.mediafire.com/file/l8b3te4g1p8z354/module.zip/file) NO PASSWORD <br>
