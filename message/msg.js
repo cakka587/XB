@@ -612,24 +612,24 @@ if (chats.startsWith(`@6288213292687`)){
 		var teksmenu = `Hai ${pushname} ${ucapanWaktu} 👋
 
 ┌━➤ *Bot WhatsApp*
-*┃┃* Creator Bot : ${ownerName}
-*┃┃* Name Bot : Xyle - Bot
-*┃┃* Prefix : Multi Prefix
-*┃┃* Language : Javascript 
-*┃└━━━━━━━━━━━*
-*┃» Thank To Allah S.W.T*
-*┃» Thank To Baileys-Md*
-*┃» Thank To Iyan*
-*┃» Thank To Arasya*
-*┃» Thank To Cakka*
-*┃» Thank To Hadi*
-*┃» Thank To Amel*
-*┃» Thank To Anto*
-*└━━━━━━━ ►*`
+┃┃ Creator Bot : ${ownerName}
+┃┃ Name Bot : Xyle - Bot
+┃┃ Prefix : Multi Prefix
+┃┃ Language : Javascript 
+┃└━━━━━━━━━━━*
+┃» Thank To Allah S.W.T
+┃» Thank To Baileys-Md
+┃» Thank To Iyan
+┃» Thank To Arasya
+┃» Thank To Cakka
+┃» Thank To Hadi
+┃» Thank To Amel
+┃» Thank To Anto
+└━━━━━━━ ►`
         const butmenu = [
         {buttonId: `/allmenu`, buttonText: { displayText: "⋮☰ ALLMENU" }, type: 1 },
         {buttonId: `/owner`, buttonText: { displayText: "☰  OWNER" }, type: 2 }]
-        conn.sendMessage(from, { caption: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: msg })
+        conn.sendMessage(from, { footer: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: msg })
 		break
 			case prefix+'allmenu':
 			    
@@ -686,7 +686,7 @@ Via :
 - Dana (081233700056)
 
 ~ Xyle Bot`)
-			    conn.sendMessage(from, {caption: teks, image: fs.readFileSync(settting.pathimg)}, {quoted: fake})
+			    conn.sendMessage(from, {caption: teks, image: fs.readFileSync(settting.pathimg) mentions: [sender]}, {quoted: fake})
 			    break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
