@@ -689,7 +689,7 @@ Via :
         conn.sendMessage(from, { caption: teks, image: fs.readFileSync(setting.pathimg), buttons: butsewa, footer: monospace(botname), mentions: [sender]}, { quoted: msg })			    break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
-			    break
+break
 case prefix+'groupxyle':
   reply("Group 1\n\nhttps://chat.whatsapp.com/HECLovHbCI6LVVH4Q8FN2C\nGroup 2\n\nhttps://chat.whatsapp.com/DqM488U09vmGpsbTMfDbMv")
   break
