@@ -686,7 +686,7 @@ Via :
 ~ Xyle Bot`
 			    const butsewa = [
         {buttonId: `/allmenu`, buttonText: { displayText: "⋮☰ ALLMENU" }, type: 1 }]
-        conn.sendMessage(from, { caption: teks, image: fs.readFileSync(setting.pathimg), buttons: butsewa, footer: monospace(botname), mentions: [sender]}, { quoted: msg })
+        conn.sendMessage(from, { caption: teks, image: fs.readFileSync(setting.pathimg), buttons: butsewa, footer: monospace(botName), mentions: [sender]}, { quoted: msg })
 break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
