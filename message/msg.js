@@ -686,7 +686,7 @@ Via :
 - Dana (081233700056)
 
 ~ Xyle Bot`)
-			    conn.sendMessage(from, {caption: teks, image: fs.readFileSync(settting.pathimg) mentions: [sender]}, {quoted: fake})
+			    conn.sendMessage(from, {caption: teks, image: fs.readFileSync(settting.pathimg), mentions: [sender]}, {quoted: fake})
 			    break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
