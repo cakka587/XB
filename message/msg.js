@@ -623,8 +623,6 @@ if (chats.startsWith(`@6288213292687`)){
 ┃» Thank To Arasya
 ┃» Thank To Cakka
 ┃» Thank To Hadi
-┃» Thank To Amel
-┃» Thank To Anto
 └━━━━━━━ ►`
         const butmenu = [
         {buttonId: `/allmenu`, buttonText: { displayText: "⋮☰ ALLMENU" }, type: 1 },
@@ -668,7 +666,7 @@ var teks = `  │
 case prefix+'sewa':
   case prefix+'daftarprem':
     
-  var teks = monospace(`[ XYLE - PREMIUM/SEWA ]
+  var teks = `[ XYLE - PREMIUM/SEWA ]
 
 Premium : Rp.10.000
 Exp : PERMANENT
@@ -685,9 +683,10 @@ Via :
 - Gopay (081233700056)
 - Dana (081233700056)
 
-~ Xyle Bot`)
-			    conn.sendMessage(from, {caption: teks, image: fs.readFileSync(settting.pathimg), mentions: [sender]}, {quoted: fake})
-			    break
+~ Xyle Bot`
+			    const butsewa = [
+        {buttonId: `/allmenu`, buttonText: { displayText: "⋮☰ ALLMENU" }, type: 1 }]
+        conn.sendMessage(from, { caption: teks, image: fs.readFileSync(setting.pathimg), buttons: butsewa, footer: monospace(botname), mentions: [sender]}, { quoted: msg })			    break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
 			    break
