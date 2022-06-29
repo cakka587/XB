@@ -2219,9 +2219,11 @@ case 'batman':
 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
     if (q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
     reply(mess.wait)
+    /**
      var link = `${textpro.batman}`
-     var anu = await textpro(link, q)
-    conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: anu}, mentions: [sender]}, {quoted: msg}).catch(() => reply(mess.error.api))
+     **/
+     var mkrbatman = await textpro(textpro.batman, q)
+    conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: mkrbatman}, mentions: [sender]}, {quoted: msg}).catch(() => reply(mess.error.api))
     limitAdd(sender, limit)
   break
 /*case prefix+'listquran':
