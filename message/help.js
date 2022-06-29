@@ -107,6 +107,7 @@ ${readmore}
 ≻ ${prefix}faktaunik
 ≻ ${prefix}ppcp
 ≻ ${prefix}darkjokes
+> ${prefix}react <Emoji>
 ≻ ${prefix}meme
 ≻ ${prefix}covid19
 ≻ ${prefix}cerpen
