@@ -2221,8 +2221,7 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit
     reply(mess.wait)
      var link = `${textpro.batman}`
      var anu = await textpro(link, q)
-    conn.sendMessage(from, { image: { url : anu }, caption: `Done @${sender.[split("@")[0]]}`, mentions: [sender] }, { quoted: msg } ).catch(() =>
-    reply(mess.error.api))
+    conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: anu}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
     limitAdd(sender, limit)
   break
 /*case prefix+'listquran':
