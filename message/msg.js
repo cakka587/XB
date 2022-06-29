@@ -2539,6 +2539,16 @@ break
  limitAdd(sender, limit)
  break*/
  //BOLEH DI AKTIFIN JIKA MENGGUNAKAN HEROKU
+case prefix+'react':
+                if (!q) return reply(`Gunakan Emoji\nContoh: ${prefix}${command}reaction 🤩`)
+                var reactionMessage = {
+                    react: {
+                        text: args[0],
+                        key: { remoteJid: from, fromMe: true, id: quoted.id }
+                    }
+                }
+                conn.sendMessage(from, reactionMessage)
+            break
 case prefix+'halah':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
   if (!isQuotedMsg) return reply(`Reply Message nya!`)
