@@ -2539,7 +2539,7 @@ case prefix+'react':
  limitAdd(sender, limit)
  break
  //BOLEH DI AKTIFIN JIKA MENGGUNAKAN HEROKU
-case 'emojimix':
+case prefix+'emojimix':
 		let [emoji1, emoji2] = text.split`+`
 		if (!emoji1) return `Example : ${prefix + command} 😅+🤔`
 		if (!emoji2) return `Example : ${prefix + command} 😅+🤔`
@@ -2548,7 +2548,7 @@ case 'emojimix':
 		    conn.sendMessage(from, { sticker: fs.readFileSync(res.url) }, {quoted: msg})
 		}
 	    break
-	    case 'emojimix2':
+case prefix+'emojimix2':
 	    if (!q) return `Example : ${prefix + command} 😅`
 		let emojimix2 = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(text)}`)
 		for (let res of emojimix2.results) {
