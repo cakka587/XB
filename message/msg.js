@@ -2208,6 +2208,36 @@ reply(mess.wait)
 thiccysapi.textpro(`https://textpro.me/create-realistic-vintage-style-light-bulb-1000.html`, [text1,text2]).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
 limitAdd(sender, limit)
 break
+case prefix+'graffiti':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+var text1 = q.split('|')[0] ? q.split('|')[0] : q
+var text2 = q.split('|')[1] ? q.split('|')[1] : ''
+if (!text1 && !text2) return reply(`Masukan Text, Contoh : ${command} Arasya|Rafi`)
+if (!text2) return reply(`Masukan Text Satu Lagi`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/create-cool-wall-graffiti-text-effect-online-1009.html`, [text1,text2]).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'matrix':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+var text1 = q.split('|')[0] ? q.split('|')[0] : q
+var text2 = q.split('|')[1] ? q.split('|')[1] : ''
+if (!text1 && !text2) return reply(`Masukan Text, Contoh : ${command} Arasya|Rafi`)
+if (!text2) return reply(`Masukan Text Satu Lagi`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/matrix-style-text-effect-online-884.html`, [text1,text2]).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'marvel':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+var text1 = q.split('|')[0] ? q.split('|')[0] : q
+var text2 = q.split('|')[1] ? q.split('|')[1] : ''
+if (!text1 && !text2) return reply(`Masukan Text, Contoh : ${command} Arasya|Rafi`)
+if (!text2) return reply(`Masukan Text Satu Lagi`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/create-logo-style-marvel-studios-online-971.html`, [text1,text2]).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
 case prefix+'neondevil':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
   if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
@@ -2220,6 +2250,48 @@ case prefix+'batman':
   if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
 reply(mess.wait)
 thiccysapi.textpro(`https://textpro.me/make-a-batman-logo-online-free-1066.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'blackpink':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/create-blackpink-logo-style-online-1001.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'avengers':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/create-3d-avengers-logo-online-974.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'transformer':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/create-a-transformer-text-effect-online-1035.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'paper':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/create-art-paper-cut-text-effect-online-1022.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'metal':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/eroded-metal-text-effect-834.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
+case prefix+'paint':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/break-wall-text-effect-871.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
 limitAdd(sender, limit)
 break
 /*case prefix+'listquran':
@@ -2403,6 +2475,7 @@ conn.sendMessage(from, { text: caption, buttons: but, footer: "© Xyle Bot", tem
 limitAdd(sender, limit)
 break
 //maker arasya
+/**
 case prefix+'leaves':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
   var data = await fetchJson(`https://jojo-docsapi.herokuapp.com/api/textpro/natural-leaves?apikey=Joo&text=${q}`)
@@ -2445,6 +2518,7 @@ case prefix+'logowolf2':
   conn.sendMessage(from, {caption: `Succes!`, image: {url: data.result}}, {quoted: msg})
   limitAdd(sender, limit)
   break
+**/
 //Amel
   break
 case prefix+'xnxx':
