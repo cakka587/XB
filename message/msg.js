@@ -2218,8 +2218,9 @@ break
 case 'batman':
 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
     if (q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
-     let link = `${textpro.batman}`
-     let anu = await textpro(link, q)
+    reply(mess.wait)
+     var link = `${textpro.batman}`
+     var anu = await textpro(link, q)
     conn.sendMessage(from, { image: { url : anu }, caption: `Done @${sender.[sender]}`}, { quoted: msg } ).catch(() =>
     reply(mess.error.api))
     limitAdd(sender, limit)
