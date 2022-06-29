@@ -627,7 +627,7 @@ if (chats.startsWith(`@6288213292687`)){
         const butmenu = [
         {buttonId: `/allmenu`, buttonText: { displayText: "⋮☰ ALLMENU" }, type: 1 },
         {buttonId: `/owner`, buttonText: { displayText: "☰  OWNER" }, type: 2 }]
-        conn.sendMessage(from, { caption: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: msg })
+        conn.sendMessage(from, { caption: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: jpegThumbnail })
 		break
 			case prefix+'allmenu':
 			    
