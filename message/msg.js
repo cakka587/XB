@@ -2535,26 +2535,11 @@ break
 case prefix+'react':
   case prefix+'reaction':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if(!q) return reply(`Contoh: ${command} 🥶`)
  conn.sendMessage(from, { react: { text: `${q}`, key: msg.key }})
  limitAdd(sender, limit)
  break
  //BOLEH DI AKTIFIN JIKA MENGGUNAKAN HEROKU
-case prefix+'emojimix':
-		let [emoji1, emoji2] = text.split`+`
-		if (!emoji1) return `Example : ${prefix + command} 😅+🤔`
-		if (!emoji2) return `Example : ${prefix + command} 😅+🤔`
-		let emojimix = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
-		for (let res of emojimix.results) {
-		    conn.sendMessage(from, { sticker: fs.readFileSync(res.url) }, {quoted: msg})
-		}
-	    break
-case prefix+'emojimix2':
-	    if (!q) return `Example : ${prefix + command} 😅`
-		let emojimix2 = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(text)}`)
-		for (let res of emojimix2.results) {
-		    conn.sendMessage(from, { sticker: fs.readFileSync(res.url) }, {quoted: msg})
-		}
-	    break
 case prefix+'halah':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
   if (!isQuotedMsg) return reply(`Reply Message nya!`)
