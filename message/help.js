@@ -90,7 +90,16 @@ ${readmore}
   
 *( 🎨 )  Menu Maker*
 ≻ ${prefix}realistic <Text1|Text2>
+> ${prefix}marvel <Text1|Text2>
+> ${prefix}graffiti <Text1|Text2>
+> ${prefix}matrix <Text>
+> ${prefix}paint <Text>
+> ${prefix}metal <Text>
 ≻ ${prefix}neondevil <Text>
+> ${prefix}blackpink <Text>
+> ${prefix}avengers <Text>
+> ${prefix}transformer <Text>
+> ${prefix}paper <Text>
   
 *( 🪀 )  Menu Lain Nya*
 ≻ ${prefix}shortlink <Link>
