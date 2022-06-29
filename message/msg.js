@@ -2532,23 +2532,29 @@ var data = await fetchJson(`https://melcanz.com/xnxxdl?url=${q}&apikey=${apikey}
 reply(mess.wait)
 conn.sendMessage(from, {video: {url: data.result.files.high}}, {quoted: msg})
 break
-/*case prefix+'react':
+case prefix+'react':
   case prefix+'reaction':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
  conn.sendMessage(from, { react: { text: `${q}`, key: msg.key }})
  limitAdd(sender, limit)
- break*/
+ break
  //BOLEH DI AKTIFIN JIKA MENGGUNAKAN HEROKU
-case prefix+'react':
-                if (!q) return reply(`Gunakan Emoji\nContoh: ${prefix}${command}reaction 🤩`)
-                var reactionMessage = {
-                    react: {
-                        text: args[0],
-                        key: { remoteJid: from, fromMe: true, id: quoted.id }
-                    }
-                }
-                conn.sendMessage(from, reactionMessage)
-            break
+case 'emojimix':
+		let [emoji1, emoji2] = text.split`+`
+		if (!emoji1) return `Example : ${prefix + command} 😅+🤔`
+		if (!emoji2) return `Example : ${prefix + command} 😅+🤔`
+		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
+		for (let res of anu.results) {
+		    conn.sendMessage(from, { sticker: fs.readFileSync(res.url) }, {quoted: msg} })
+		}
+	    break
+	    case 'emojimix2':
+	    if (!q) return `Example : ${prefix + command} 😅`
+		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(text)}`)
+		for (let res of anu.results) {
+		    conn.sendMessage(from, { sticker: fs.readFileSync(res.url) }, {quoted: msg} })
+		}
+	    break
 case prefix+'halah':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
   if (!isQuotedMsg) return reply(`Reply Message nya!`)
