@@ -25,6 +25,7 @@ const { webp2mp4File } = require("../lib/convert")
 const { toAudio, toPTT, toVideo } = require('../lib/converter')
 const { y2mateA, y2mateV } = require('../lib/y2mate')
 const { pinterest } = require("../lib/pinterest")
+const { textpro } = require("../lib/textpro")
 const { darkjokes } = require("../lib/darkjokes")
 const { igstalk } = require("../lib/igstalk")
 const { lirikLagu } =require("../lib/lirik.js")
@@ -2209,10 +2210,20 @@ limitAdd(sender, limit)
 break
 case prefix+'neondevil':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
 reply(mess.wait)
 thiccysapi.textpro(`https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
 limitAdd(sender, limit)
 break
+case 'batman':
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+    if (q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+     let link = `${textpro.batman}`
+     let anu = await textpro(link, q)
+    conn.sendMessage(from, { image: { url : anu }, caption: `Done @${sender.[sender]}`}, { quoted: msg } ).catch(() =>
+    reply(mess.error.api))
+    limitAdd(sender, limit)
+  break
 /*case prefix+'listquran':
   var listquran = `*[ LIST QURAN ]*
 
