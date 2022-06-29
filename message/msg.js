@@ -2216,14 +2216,12 @@ thiccysapi.textpro(`https://textpro.me/create-neon-devil-wings-text-effect-onlin
 limitAdd(sender, limit)
 break
 case prefix+'batman':
-if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-    if (!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
-    reply(mess.wait)
-     var linkbatman = `${textpro.batman}`
-     var mkrbatman = await textpro(linkbatman, q)
-    conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: mkrbatman}, mentions: [sender]}, {quoted: msg}).catch(() => reply(mess.error.api))
-    limitAdd(sender, limit)
-  break
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  if(!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+reply(mess.wait)
+thiccysapi.textpro(`https://textpro.me/make-a-batman-logo-online-free-1066.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
+limitAdd(sender, limit)
+break
 /*case prefix+'listquran':
   var listquran = `*[ LIST QURAN ]*
 
