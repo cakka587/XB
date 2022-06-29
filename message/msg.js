@@ -2215,9 +2215,9 @@ reply(mess.wait)
 thiccysapi.textpro(`https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html`, q).then ( data => { conn.sendMessage(from, {caption: `Done @${sender.split("@")[0]}`, image: {url: data}, mentions: [sender]}, {quoted: msg})}).catch(() => reply(mess.error.api))
 limitAdd(sender, limit)
 break
-case 'batman':
+case prefix+'batman':
 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-    if (q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
+    if (!q) return reply(`Masukan Text, Contoh : ${command} Cakka`)
     reply(mess.wait)
     /**
      var link = `${textpro.batman}`
