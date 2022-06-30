@@ -610,9 +610,8 @@ if (chats.startsWith(`@6288213292687`)){
 		//main menu
 		case prefix+'menu':
 		case prefix+'help':
-		var teksmenu = `Hai ${pushname} ${ucapanWaktu} 👋
-
-┌━➤ *Bot WhatsApp*
+		var captionmenu = `Hai ${pushname} ${ucapanWaktu} 👋`
+                var footermenu = `┌━➤ *Bot WhatsApp*
 ┃┃ Creator Bot : ${ownerName}
 ┃┃ Name Bot : Xyle - Bot
 ┃┃ Prefix : Multi Prefix
@@ -628,7 +627,7 @@ if (chats.startsWith(`@6288213292687`)){
         const butmenu = [
         {buttonId: `/allmenu`, buttonText: { displayText: "⋮☰ ALLMENU" }, type: 1 },
         {buttonId: `/owner`, buttonText: { displayText: "☰  OWNER" }, type: 2 }]
-        conn.sendMessage(from, { caption: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: fake })
+        conn.sendMessage(from, { caption: captionmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: footermenu, mentions: [sender]}, { quoted: fake })
 		break
 			case prefix+'allmenu':
 			    
