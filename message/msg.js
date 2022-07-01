@@ -2139,6 +2139,20 @@ case prefix+'add':
                     textImg(`Limit : ${isPremium ? 'Unlimited' : limitPrib}\nLimit Game : ${cekGLimit(sender, gcount, glimit)}/${gcount}\nBalance : $${getBalance(sender, balance)}\n\nKamu dapat membeli limit dengan ${prefix}buylimit dan ${prefix}buyglimit untuk membeli game limit`)
                 }
 				break
+case prefix+'quotesanime':
+    case prefix+'animequotes':
+      if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+			var resqa = await (await fetch('https://katanime.vercel.app/api/getrandom'))
+  if (!resqa.ok) throw await resqa.text()
+  let jsonqa = await resqa.json()
+  if(!jsonqa.result[0]) throw jsonqa
+  var { indoqa, characterqa, animeqa } = jsonqa.result[0]
+var meko = [
+			{ quickReplyButton: { displayText: `Next Anime Quotes ➡️`, id: `${prefix}quotesanime` } },
+		]
+		conn.sendMessage(from, {caption: indoqa, templateButtons: meko, footer: `© ${characterqa} | ${animeqa}`, mentions: [sender]} )
+		limitAdd(sender, limit)
+break
 //nsfw
 case prefix+'pussy':
   if (!isPremium)return reply(mess.OnlyPrem)
