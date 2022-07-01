@@ -45,6 +45,7 @@ const moment = require("moment-timezone");
 const util = require("util");
 const { exec, spawn } = require("child_process");
 const ffmpeg = require("fluent-ffmpeg");
+const fetch = require("node-fetch");
 const xfar = require('xfarr-api');
 const axios = require("axios");
 const hikki = require("hikki-me");
