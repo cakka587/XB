@@ -102,6 +102,7 @@ ${readmore}
 > ${prefix}paper <Text>
   
 *( 🪀 )  Menu Lain Nya*
+> ${prefix}wallpaper <Text>
 ≻ ${prefix}shortlink <Link>
 ≻ ${prefix}kbbi <Kata>
 ≻ ${prefix}faktaunik
