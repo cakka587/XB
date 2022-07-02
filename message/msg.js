@@ -24,6 +24,7 @@ const { geuffer, fetchJson, fetchText, getRandom, getGroupAdmins, runtime, sleep
 const { webp2mp4File } = require("../lib/convert")
 const { toAudio, toPTT, toVideo } = require('../lib/converter')
 const { y2mateA, y2mateV } = require('../lib/y2mate')
+const { wallpaper, quotesAnime } = require("../lib/scraper.js")
 const { pinterest } = require("../lib/pinterest")
 const { textpro } = require("../lib/textpro")
 const { darkjokes } = require("../lib/darkjokes")
@@ -2140,20 +2141,29 @@ case prefix+'add':
                     textImg(`Limit : ${isPremium ? 'Unlimited' : limitPrib}\nLimit Game : ${cekGLimit(sender, gcount, glimit)}/${gcount}\nBalance : $${getBalance(sender, balance)}\n\nKamu dapat membeli limit dengan ${prefix}buylimit dan ${prefix}buyglimit untuk membeli game limit`)
                 }
 				break
-case prefix+'quotesanime':
-    case prefix+'animequotes':
-      if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-			var resqa = await (await fetch('https://katanime.vercel.app/api/getrandom'))
-  if (!resqa.ok) throw await resqa.text()
-  let jsonqa = await resqa.json()
-  if(!jsonqa.result[0]) throw jsonqa
-  var { indoqa, characterqa, animeqa } = jsonqa.result[0]
-var meko = [
-			{ quickReplyButton: { displayText: `Next Anime Quotes ➡️`, id: `${prefix}quotesanime` } },
-		]
-		conn.sendMessage(from, {caption: indoqa, templateButtons: meko, footer: `© ${characterqa} | ${animeqa}`, mentions: [sender]} )
-		limitAdd(sender, limit)
-break
+case prefix+'wallpaper': case prefix+'animewallpaper': case prefix+'animewall': 
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                if (!q) return reply("Example: "+command+" Naruto")
+                var anuwal = await wallpaper(args)
+                var result = anuwal[Math.floor(Math.random() * anuwal.length)]
+		var butwal = [
+                    {buttonId: `.wallpaper ${args.join(" ")}`, buttonText: {displayText: 'Next Image ➡️'}, type: 1}
+                ]
+                
+                conn.sendMessage(from, { caption: `Title : ${result.title}\nCategory : ${result.type}\nDetail : ${result.source}\nMedia Url : ${result.image[2] || result.image[1] || result.image[0]}`, image: { url: result.image[0] }, footer: monospace(botName), buttons: butwal }, { quoted: msg })
+            break
+case prefix+'animequote':
+case prefix+'quoteanime':
+if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                var anu = await quotesAnime()
+                var result = anu[Math.floor(Math.random() * anu.length)]
+		var but = [
+                    {buttonId: `.quoteanime`, buttonText: {displayText: 'Next Quotes ➡️'}, type: 1}
+                ]
+                
+                conn.sendMessage(from, { caption: result.quotes, footer: `© ${result.karakter} | ${result.anime}`, buttons: but }, { quoted: msg })
+                limitAdd(sender, limit)
+            break
 //nsfw
 case prefix+'pussy':
   if (!isPremium)return reply(mess.OnlyPrem)
